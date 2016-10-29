@@ -48,15 +48,24 @@ app.get('/api/waitlist', function (req, res) {
 // Create New Characters - takes in JSON input
 app.post('/api/reserve', function (req, res) {
 	var newreservation = req.body;
-	newreservation.name = newreservation.name.replace(/\s+/g, '').toLowerCase
+	newreservation.uniqueID = newreservation.uniqueID.replace(/\s+/g, '').toLowerCase
 
+	reservationdetails = tableornot(newreservation,res);
 
 	console.log(newreservation);
 
-	characters.push(newreservation);
-
-	res.json(newres);
+	res.json(data);
 });
+
+function tableornot(newreservation, res) {
+	if(tables.length>5){
+		waitlist.push(newreservation);
+	} else {
+		tables.push(tables);
+	}
+	return(reservationdetails);
+}
+
 
 // Starts the server to begin listening
 // =============================================================
