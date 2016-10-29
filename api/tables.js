@@ -17,4 +17,4 @@ var tables = [{
 	uniqueID: 600
 }];
 
-module.exports = 'tables';
+module.exports = tables;

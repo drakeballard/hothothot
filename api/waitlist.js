@@ -5,4 +5,4 @@ var waitlist = [{
   uniqueID: ''
 }];
 
-module.exports = 'waitlist';
+module.exports = waitlist;

@@ -34,25 +34,21 @@ app.get('/tables', function (req, res) {
 });
 
 // Search for Specific Character (or all characters) - provides JSON
-// app.get('/api/:?', function (req, res) {
-// 	var chosen = req.params.;
-//
-// 	if (chosen) {
-// 		console.log(chosen);
-// 			}
-// 		}
-//
-// 		res.json(false);
-// 	} else {
-// 		res.json();
-// 	}
-// });
+app.get('/api/tables', function (req, res) {
+		console.log(tables);
+		res.json(tables);
+});
+
+app.get('/api/waitlist', function (req, res) {
+		console.log(waitlist);
+		res.json(waitlist);
+});
 
 
 // Create New Characters - takes in JSON input
 app.post('/api/reserve', function (req, res) {
 	var newreservation = req.body;
-	newcharacter.routeName = newcharacter.name.replace(/\s+/g, '').toLowerCase
+	newreservation.name = newreservation.name.replace(/\s+/g, '').toLowerCase
 
 
 	console.log(newreservation);
