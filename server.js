@@ -57,7 +57,34 @@ app.get('/tables', function (req, res) {
 	res.sendFile(path.join(__dirname, 'tables.html'));
 });
 
+// Search for Specific Character (or all characters) - provides JSON
+// app.get('/api/:?', function (req, res) {
+// 	var chosen = req.params.;
+//
+// 	if (chosen) {
+// 		console.log(chosen);
+// 			}
+// 		}
+//
+// 		res.json(false);
+// 	} else {
+// 		res.json();
+// 	}
+// });
 
+
+// Create New Characters - takes in JSON input
+app.post('/api/reserve', function (req, res) {
+	var newreservation = req.body;
+	newcharacter.routeName = newcharacter.name.replace(/\s+/g, '').toLowerCase
+
+
+	console.log(newreservation);
+
+	characters.push(newreservation);
+
+	res.json(newres);
+});
 
 // Starts the server to begin listening
 // =============================================================
