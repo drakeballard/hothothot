@@ -3,6 +3,8 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var path = require('path');
+var tables = require('./api/tables.js');
+var waitlist = require('./api/waitlist.js');
 
 // Sets up the Express App
 // =============================================================
@@ -14,32 +16,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
-
-var tables = [{
-	name: 'John',
-	phonenumber: '5126805890',
-	email: 'armthepit@armthepit.com',
-	uniqueID: 900
-
-}, {
-  name: 'Sung',
-	phonenumber: '5121232567',
-	email: 'JediMaster@sung.com',
-	uniqueID: 300
-
-}, {
-  name: 'Jason',
-	phonenumber: '5129876543',
-	email: 'masterjedi@jason.com',
-	uniqueID: 600
-}];
-
-var waitlist = [{
-  name: '',
-  phonenumber: '',
-  email: '',
-  uniqueID: ''
-}];
 
 // Routes
 // =============================================================
