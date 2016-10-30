@@ -1,8 +1,3 @@
-var waitlist = [{
-  name: '',
-  phonenumber: '',
-  email: '',
-  uniqueID: ''
-}];
+var waitlist = [];
 
 module.exports = waitlist;

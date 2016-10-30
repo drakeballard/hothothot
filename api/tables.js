@@ -15,6 +15,11 @@ var tables = [{
 	phonenumber: '5129876543',
 	email: 'masterjedi@jason.com',
 	uniqueID: 600
+}, {
+  name: 'Jason',
+	phonenumber: '5129876543',
+	email: 'masterjedi@jason.com',
+	uniqueID: 700	
 }];
 
 module.exports = tables;
